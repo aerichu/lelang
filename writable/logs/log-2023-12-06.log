@@ -1,0 +1,443 @@
+ERROR - 2023-12-06 01:09:59 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Lelang\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'lelang_online', 3306, '', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Lelang\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(24): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\Lelang\app\Controllers\Home.php(423): App\Models\M_lelang->getWhere('petugas', Array)
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_login()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Lelang\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Lelang\app\Models\M_lelang.php(24): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 D:\Lelang\app\Controllers\Home.php(423): App\Models\M_lelang->getWhere('petugas', Array)
+#5 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_login()
+#6 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-12-06 01:09:59 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `petugas`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\M_lelang.php(24): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Controllers\Home.php(423): App\Models\M_lelang->getWhere('petugas', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-06 01:20:17 --> Undefined variable $data
+in APPPATH\Controllers\Home.php on line 669.
+ 1 APPPATH\Controllers\Home.php(669): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'D:\\Lelang\\app\\Controllers\\Home.php', 669)
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->Bid('2')
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-06 01:20:39 --> Undefined variable $satu
+in APPPATH\Views\Bid.php on line 17.
+ 1 APPPATH\Views\Bid.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satu', 'D:\\Lelang\\app\\Views\\Bid.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\Bid.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Bid', [], true)
+ 5 APPPATH\Controllers\Home.php(669): view('Bid')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->Bid('2')
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-06 01:45:48 --> syntax error, unexpected string content ");", expecting ")"
+in APPPATH\Config\Routes.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(783): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-06 01:48:18 --> Class "App\Controllers\Config\Services" not found
+in APPPATH\Controllers\Home.php on line 622.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 01:48:39 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('4')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 01:48:39 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('4')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 01:49:37 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('4')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 01:49:37 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('4')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 01:51:50 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('4')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 01:51:50 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('4')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 01:53:43 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 01:53:43 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 01:58:25 --> mysqli_sql_exception: Table 'lelang_online.lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(37): App\Models\M_lelang->joinnelson('lelang', 'barang', 'petugas', 'masyarakat', 'lelang.id_baran...', 'lelang.id_petug...', 'lelang.id_user=...', 'lelang.id_lelan...')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->lelang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 01:58:25 --> Table 'lelang_online.lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lelang`
+LEFT JOIN `barang` ON `lelang`.`id_barang`=`barang`.`id_barang`
+LEFT JOIN `petugas` ON `lelang`.`id_petugas`=`petugas`.`id_petugas`
+LEFT JOIN `masyarakat` ON `lelang`.`id_user`=`masyarakat`.`id_user`
+ORDER BY `lelang`.`id_lelang` DESC', [], false)
+ 2 APPPATH\Models\M_lelang.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(37): App\Models\M_lelang->joinnelson('lelang', 'barang', 'petugas', 'masyarakat', 'lelang.id_barang=barang.id_barang', 'lelang.id_petugas=petugas.id_petugas', 'lelang.id_user=masyarakat.id_user', 'lelang.id_lelang')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->lelang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 01:58:58 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 01:58:58 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 02:00:27 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 02:00:27 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 03:25:40 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 03:25:40 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 03:29:00 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 03:29:00 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 04:25:31 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 04:25:31 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 04:25:47 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 04:25:47 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 04:26:51 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 04:26:51 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 04:27:46 --> mysqli_sql_exception: Table 'lelang_online.tb_lelang' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `harga_a...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `harga_a...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `harga_a...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_a...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 04:27:46 --> Table 'lelang_online.tb_lelang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `harga_akhir`
+FROM `tb_lelang`
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(624): App\Models\M_lelang->getPreviousHarga('2')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-06 04:28:18 --> mysqli_sql_exception: MySQL server has gone away in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `lelang`...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `lelang`...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `lelang`...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `lelang`...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(35): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 D:\Lelang\app\Controllers\Home.php(655): App\Models\M_lelang->edit('lelang', Array, Array)
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-06 04:28:18 --> MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `lelang` SET `harga_akhir` = :harga_akhir:, `id_user` = :id_user:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(35): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Controllers\Home.php(655): App\Models\M_lelang->edit('lelang', [...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_bbarang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')

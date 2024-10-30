@@ -1,0 +1,50 @@
+ERROR - 2023-12-03 07:09:23 --> mysqli_sql_exception: Unknown column 'deskripsi' in 'field list' in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `barang`...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(35): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 D:\Lelang\app\Controllers\Home.php(202): App\Models\M_lelang->edit('barang', Array, Array)
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_edit_barang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-03 07:09:23 --> Unknown column 'deskripsi' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `nama_barang` = :nama_barang:, `date` = :date:, `harga_awal` = :harga_awal:, `deskripsi` = :deskripsi:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(35): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Controllers\Home.php(202): App\Models\M_lelang->edit('barang', [...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_edit_barang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-03 07:11:00 --> mysqli_sql_exception: Unknown column 'deskripsi' in 'field list' in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `barang`...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(35): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 D:\Lelang\app\Controllers\Home.php(202): App\Models\M_lelang->edit('barang', Array, Array)
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_edit_barang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-03 07:11:00 --> Unknown column 'deskripsi' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `nama_barang` = :nama_barang:, `date` = :date:, `harga_awal` = :harga_awal:, `deskripsi` = :deskripsi:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Models\M_lelang.php(35): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Controllers\Home.php(202): App\Models\M_lelang->edit('barang', [...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_edit_barang()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')

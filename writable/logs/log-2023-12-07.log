@@ -1,0 +1,175 @@
+CRITICAL - 2023-12-07 00:11:07 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Home.php on line 661.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\Lelang\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(873): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-07 01:09:49 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Lelang\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'lelang_online', 3306, '', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Lelang\app\Controllers\Home.php(37): App\Models\M_lelang->joinnelson('lelang', 'barang', 'petugas', 'masyarakat', 'lelang.id_baran...', 'lelang.id_petug...', 'lelang.id_user=...', 'lelang.id_lelan...')
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->lelang()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Lelang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Lelang\app\Models\M_lelang.php(48): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Lelang\app\Controllers\Home.php(37): App\Models\M_lelang->joinnelson('lelang', 'barang', 'petugas', 'masyarakat', 'lelang.id_baran...', 'lelang.id_petug...', 'lelang.id_user=...', 'lelang.id_lelan...')
+#5 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->lelang()
+#6 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-12-07 01:09:49 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lelang`
+LEFT JOIN `barang` ON `lelang`.`id_barang`=`barang`.`id_barang`
+LEFT JOIN `petugas` ON `lelang`.`id_petugas`=`petugas`.`id_petugas`
+LEFT JOIN `masyarakat` ON `lelang`.`id_user`=`masyarakat`.`id_user`
+ORDER BY `lelang`.`id_lelang` DESC', [], false)
+ 3 APPPATH\Models\M_lelang.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(37): App\Models\M_lelang->joinnelson('lelang', 'barang', 'petugas', 'masyarakat', 'lelang.id_barang=barang.id_barang', 'lelang.id_petugas=petugas.id_petugas', 'lelang.id_user=masyarakat.id_user', 'lelang.id_lelang')
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->lelang()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:17:35 --> Undefined variable $manda
+in APPPATH\Views\tambah_lelang.php on line 38.
+ 1 APPPATH\Views\tambah_lelang.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\Lelang\\app\\Views\\tambah_lelang.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\tambah_lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tambah_lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('tambah_lelang')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->tambah_lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:21:23 --> Undefined variable $manda
+in APPPATH\Views\tambah_lelang.php on line 32.
+ 1 APPPATH\Views\tambah_lelang.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\Lelang\\app\\Views\\tambah_lelang.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\tambah_lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tambah_lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('tambah_lelang')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->tambah_lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:23:29 --> Undefined variable $manda
+in APPPATH\Views\tambah_lelang.php on line 32.
+ 1 APPPATH\Views\tambah_lelang.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\Lelang\\app\\Views\\tambah_lelang.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\tambah_lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tambah_lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('tambah_lelang')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->tambah_lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:23:31 --> Undefined variable $manda
+in APPPATH\Views\tambah_lelang.php on line 32.
+ 1 APPPATH\Views\tambah_lelang.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\Lelang\\app\\Views\\tambah_lelang.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\tambah_lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tambah_lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('tambah_lelang')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->tambah_lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:23:31 --> Undefined variable $manda
+in APPPATH\Views\tambah_lelang.php on line 32.
+ 1 APPPATH\Views\tambah_lelang.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\Lelang\\app\\Views\\tambah_lelang.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\tambah_lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tambah_lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('tambah_lelang')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->tambah_lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:23:31 --> Undefined variable $manda
+in APPPATH\Views\tambah_lelang.php on line 32.
+ 1 APPPATH\Views\tambah_lelang.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\Lelang\\app\\Views\\tambah_lelang.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\tambah_lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tambah_lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('tambah_lelang')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->tambah_lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:23:31 --> Undefined variable $manda
+in APPPATH\Views\tambah_lelang.php on line 32.
+ 1 APPPATH\Views\tambah_lelang.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\Lelang\\app\\Views\\tambah_lelang.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\tambah_lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tambah_lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('tambah_lelang')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->tambah_lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:23:31 --> Undefined variable $manda
+in APPPATH\Views\tambah_lelang.php on line 32.
+ 1 APPPATH\Views\tambah_lelang.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\Lelang\\app\\Views\\tambah_lelang.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Lelang\\app\\Views\\tambah_lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tambah_lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('tambah_lelang')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->tambah_lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
+ERROR - 2023-12-07 03:40:29 --> mysqli_sql_exception: Table 'lelang_online.tb_petugas' doesn't exist in D:\Lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\Lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\Lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\Lelang\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\Lelang\app\Models\M_lelang.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Lelang\app\Controllers\Home.php(352): App\Models\M_lelang->tambah('tb_petugas', Array)
+#6 D:\Lelang\system\CodeIgniter.php(915): App\Controllers\Home->aksi_t_petugas()
+#7 D:\Lelang\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-07 03:40:29 --> Table 'lelang_online.tb_petugas' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_petugas` (`nama_petugas`, `username`, `password`, `id_level`) VALUES (:nama_petugas:, :username:, :password:, :id_level:)', [...], false)
+ 2 APPPATH\Models\M_lelang.php(30): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(352): App\Models\M_lelang->tambah('tb_petugas', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Home->aksi_t_petugas()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Lelang\\public\\index.php')
